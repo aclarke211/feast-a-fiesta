@@ -16,7 +16,7 @@ export default function MealsPage() {
     <main>
       <h1>Meals</h1>
 
-      <div class='meal'>
+      <div className='meal'>
         {meals.map((meal, key) => {
           return (
             <p key={key}>
