@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import mainHeaderStyles from '@/components/main-header.module.css';
 
 import logoImg from '@/assets/logo.png';
 
@@ -15,13 +16,13 @@ const navLinks = [
 
 export default function MainHeader() {
   return (
-    <header>
-      <Link href='/'>
+    <header className={mainHeaderStyles.header}>
+      <Link className={mainHeaderStyles.logo} href='/'>
         <img src={logoImg.src} alt='Feast-a-Fiesta logo image' />
-        <h1>Feast-a-Fiesta</h1>
+        Feast-a-Fiesta
       </Link>
 
-      <nav>
+      <nav className={mainHeaderStyles.nav}>
         <ul>
           {navLinks.map((navLink, key) => {
             return (
