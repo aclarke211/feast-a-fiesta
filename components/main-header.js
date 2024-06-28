@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import mainHeaderStyles from '@/components/main-header.module.css';
+import Image from 'next/image';
 
+import mainHeaderStyles from '@/components/main-header.module.css';
 import logoImg from '@/assets/logo.png';
 
 const navLinks = [
@@ -18,7 +19,7 @@ export default function MainHeader() {
   return (
     <header className={mainHeaderStyles.header}>
       <Link className={mainHeaderStyles.logo} href='/'>
-        <img src={logoImg.src} alt='Feast-a-Fiesta logo image' />
+        <Image priority src={logoImg} alt='Feast-a-Fiesta logo image' />
         Feast-a-Fiesta
       </Link>
 
